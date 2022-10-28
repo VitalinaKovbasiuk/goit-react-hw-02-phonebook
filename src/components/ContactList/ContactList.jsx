@@ -24,7 +24,7 @@ ContactList.propTypes = {
   contacts: PropTypes.arrayOf(
     PropTypes.exact({
       name: PropTypes.string.isRequired,
-      phoneNumber: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
       id: PropTypes.string.isRequired,
     })
   ),
