@@ -1,14 +1,19 @@
 import PropTypes from 'prop-types';
-import { List, ListItem, ListDeleteButton } from './ContactList.styled';
+import {
+  List,
+  ListItem,
+  ListDeleteButton,
+  Information,
+} from './ContactList.styled';
 
 const ContactList = ({ contacts, deleteContact }) => (
   <List>
     {contacts.map(({ id, name, number }) => {
       return (
         <ListItem key={id}>
-          <p>
+          <Information>
             {name}: {number}
-          </p>
+          </Information>
           <ListDeleteButton type="button" onClick={() => deleteContact(id)}>
             Delete
           </ListDeleteButton>
